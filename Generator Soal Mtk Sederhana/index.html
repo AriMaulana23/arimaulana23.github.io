@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soal MTK</title>
+
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: bisque;
+      }
+
+      #angka1,
+      #operator,
+      #angka2 {
+        display: inline-block;
+      }
+
+      .container {
+        border: 1px solid black;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        width: 200px;
+        text-align: center;
+      }
+
+      button {
+        background-color: burlywood;
+        border: none;
+        width: 100px;
+        font-size: 18px;
+        height: 40px;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Generate Soal Matematika anak-anak</h2>
+
+    <label name="form">Hasil Generate : </label>
+    <div class="container">
+      <h3 name="angka1" id="angka1"></h3>
+      <h3 name="operator" id="operator">tekan tombol</h3>
+      <h3 name="angka2" id="angka2"></h3>
+    </div>
+    <button onclick="klik()">buat</button>
+
+    <script>
+      function klik() {
+        const angka1 = document.getElementById("angka1");
+        const operator = document.getElementById("operator");
+        const angka2 = document.getElementById("angka2");
+
+        const operatorA = ["+", "-"];
+
+        bilanganR = Math.floor(Math.random() * 2);
+
+        let angka1Random = Math.floor(Math.random() * 16);
+        let angka2Random = Math.floor(Math.random() * 6);
+
+        if (angka1Random === 0) {
+          angka1Random = Math.floor(Math.random() * 16);
+        }
+
+        if (angka2Random === 0) {
+          angka2Random = Math.floor(Math.random() * 6);
+        }
+
+        if (bilanganR === 0) {
+          operator.innerText = operatorA[0];
+        } else {
+          operator.innerText = operatorA[1];
+        }
+
+        angka1.innerText = angka1Random;
+        angka2.innerText = angka2Random + " =";
+      }
+    </script>
+  </body>
+</html>
