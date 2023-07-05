@@ -1,0 +1,16 @@
+body {
+  height: 2000px;
+}
+.jumbotron {
+  background-image: url(/img/imgbanner2.jpg);
+  background-size: cover;
+  height: 600px;
+}
+
+.bg-panel {
+  background-color: #ffffff;
+  height: 7rem;
+  margin-top: -6rem;
+  margin-bottom: 3rem;
+  border-radius: 15px;
+}
