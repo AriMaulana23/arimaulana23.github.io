@@ -2,7 +2,7 @@ body {
   height: 2000px;
 }
 .jumbotron {
-  background-image: url(img/imgbanner2.jpg);
+  background-image: url('img/imgbanner2.jpg');
   background-size: cover;
   height: 600px;
 }
